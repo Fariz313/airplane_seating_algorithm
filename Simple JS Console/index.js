@@ -21,6 +21,7 @@ do {
     const seat = prompt("Input seat availability :");
     passenger = prompt("Input total passenger :");
     seatArray = JSON.parse(seat);
+    console.time("tp");
     console.log(seatArray);
     if (seatArray.length > 0) {
         // Cek input format  & define element of array
@@ -142,6 +143,7 @@ console.log("windowSeatPassenger", windowSeatPassenger);
 console.log("middleSeatPassenger", middleSeatPassenger);
 
 console.log(outputString);
+console.timeEnd("tp");
 
 function padWithLeadingZeros(num, totalLength) {
   return String(num).padStart(totalLength, "0");
